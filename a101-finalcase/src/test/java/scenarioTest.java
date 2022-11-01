@@ -1,24 +1,18 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class scenarioTest {
-
-    protected WebDriver driver;
-    private String startupUrl = "https://www.hepsiburada.com/";
-
+    MemberShip membership=new MemberShip();
     @Before
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(startupUrl);
     }
 
     @Test
     public void scenario(){
+        membership.logInButtonHover();
+        membership.signUpButtonClick();
+        membership.signUpPageButtonClick();
     }
 
     @After
