@@ -3,7 +3,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class utils {
+public class Utils {
     private static WebDriver driver;
     public static WebDriver getDriver(){
         if (driver!=null)
