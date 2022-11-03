@@ -5,14 +5,17 @@ import org.junit.Test;
 public class ScenarioTest {
     Search search=new Search();
     Products products=new Products();
+    Basket basket=new Basket();
     @Before
     public void setUp(){
     }
 
     @Test
-    public void scenario() throws InterruptedException {
+    public void scenario() {
         search.searchTextBoxTexting();
         products.clickTheProduct();
+        basket.validate();
+
     }
 
     @After

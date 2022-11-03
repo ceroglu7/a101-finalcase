@@ -10,6 +10,8 @@ import java.util.Set;
 public class Products {
     Actions actions;
     WebDriver driver;
+    public static String product1Text;
+    public static String product2Text;
     String clickFirstProductXpath = "/html/body/div[3]/main/div[2]/div/div[6]/div[2]/div[2]/div[4]/div/div/div/div/div/div/ul/li[3]/div/a/div[2]/h3";
     String addCartButtonXpath = "/html/body/div[2]/main/div[3]/section[1]/div[3]/div/div[4]/div[1]/div[7]/form/span/button";
     String productTextXpath = "/html/body/div[2]/main/div[3]/section[1]/div[3]/div/div[4]/div[1]/header/h1";
@@ -24,11 +26,9 @@ public class Products {
         driver.findElement(By.xpath(clickFirstProductXpath)).click();
         focusNewTab();
         driver.findElement(By.xpath(addCartButtonXpath)).click();
-        String product1Text = driver.findElement(By.xpath(productTextXpath)).getText();
-        System.out.println(product1Text);
+        product1Text = driver.findElement(By.xpath(productTextXpath)).getText();
         driver.findElement(By.xpath(secondMerchandXpath)).click();
-        String product2Text=driver.findElement(By.xpath(productTextXpath)).getText();
-        System.out.println(product2Text);
+        product2Text =driver.findElement(By.xpath(productTextXpath)).getText();
         driver.findElement(By.xpath(addCartButtonXpath)).click();
         driver.findElement(By.xpath(basketButtonXpath)).click();
     }
