@@ -13,11 +13,9 @@ public class ScenarioTest {
     @Test
     public void scenario() {
         search.searchTextBoxTexting();
-        products.clickTheProduct();
+        products.clickAndAddTheBasket();
         basket.validate();
-
     }
-
     @After
     public void finish(){
     }

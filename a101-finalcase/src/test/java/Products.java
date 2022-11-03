@@ -1,10 +1,6 @@
-import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-
-import java.util.ArrayList;
 import java.util.Set;
 
 public class Products {
@@ -21,18 +17,16 @@ public class Products {
         driver = Utils.getDriver();
         actions = new Actions(driver);
     }
-
-    public void clickTheProduct() {
+    public void clickAndAddTheBasket() {
         driver.findElement(By.xpath(clickFirstProductXpath)).click();
         focusNewTab();
         driver.findElement(By.xpath(addCartButtonXpath)).click();
         product1Text = driver.findElement(By.xpath(productTextXpath)).getText();
         driver.findElement(By.xpath(secondMerchandXpath)).click();
-        product2Text =driver.findElement(By.xpath(productTextXpath)).getText();
         driver.findElement(By.xpath(addCartButtonXpath)).click();
+        product2Text =driver.findElement(By.xpath(productTextXpath)).getText();
         driver.findElement(By.xpath(basketButtonXpath)).click();
     }
-
     public void focusNewTab() {
         String Parent_id = driver.getWindowHandle();
         Set<String> Child_id = driver.getWindowHandles();
