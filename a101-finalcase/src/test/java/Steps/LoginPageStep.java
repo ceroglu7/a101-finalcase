@@ -1,5 +1,6 @@
 package Steps;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import static org.junit.Assert.assertEquals;
 
 public class LoginPageStep  {
+    final static Logger logger = Logger.getLogger(LoginPageStep.class);
     WebDriver driver;
     Actions actions;
     String acceptCookiesButton="/html/body/div[3]/div[2]/div/div[1]/div/div[2]/div/button[2]";
@@ -26,21 +28,27 @@ public class LoginPageStep  {
         actions = new Actions(driver);
     }
     public void homePageUrl(){
+        logger.info("Test başlatıldı.");
         driver.navigate().to(startUpUrl);
+        logger.info("Test Edilecek Sayfa : " + driver.getTitle());
     }
     public void loggingIn() {
         driver.findElement(By.xpath(acceptCookiesButton)).click();
+        logger.info("Çerezler kabul edildi.");
         actions.moveToElement(driver.findElement(By.xpath(logInHoverButtonXpath))).perform();
         driver.findElement(By.xpath(logInButtonXpath)).click();
+        logger.info("Anasayfada Giriş Yap'a Tıklandı.");
         driver.findElement(By.xpath(facebookXpath)).click();
+        logger.info("Facebook ile Giriş Yap'a Tıklandı.");
         driver.findElement(By.xpath(facebookEmailTextBoxXpath)).sendKeys(myMailAdress);
         actions.sendKeys(Keys.TAB).perform();
         actions.sendKeys(myPassword).perform();
         actions.sendKeys(Keys.ENTER).perform();
+        logger.info("Mail adresi ve şifre girildi.");
         driver.findElement(By.xpath(facebookContinouButtonXpath)).click();
     }
     public void validate(){
         assertEquals(myName, driver.findElement(By.xpath(validateNameXpath)).getText());
-        System.out.println("Adım: "+myName+" iken okunan değer: "+driver.findElement(By.xpath(validateNameXpath)).getText());
+        logger.info("Giriş yapılan kullanıcı doğrulandı.");
     }
 }

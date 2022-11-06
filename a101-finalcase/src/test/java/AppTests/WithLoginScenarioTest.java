@@ -4,8 +4,6 @@ import Steps.LoginPageStep;
 import Steps.ProductsPageStep;
 import Steps.MainPageStep;
 import org.junit.Test;
-import org.openqa.selenium.support.FindBy;
-
 public class WithLoginScenarioTest {
 
     MainPageStep mainPageStep =new MainPageStep();

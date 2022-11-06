@@ -11,6 +11,7 @@ public class WithoutLoginScenarioTest {
     @Test
     public void scenario() {
         mainPageStep.homePageUrl();
+        mainPageStep.acceptCookies();
         mainPageStep.searchTextBoxTexting();
         productsPageStep.clickAndAddTheBasket();
         basketPageStep.validate();
