@@ -1,9 +1,11 @@
+package Steps;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import java.util.Set;
 
-public class Products {
+public class ProductsPageStep {
     Actions actions;
     WebDriver driver;
     public static String product1Text;
@@ -13,7 +15,7 @@ public class Products {
     String productTextXpath = "/html/body/div[2]/main/div[3]/section[1]/div[3]/div/div[4]/div[1]/header/h1";
     String secondMerchandXpath = "/html/body/div[2]/main/div[3]/section[1]/div[3]/div/div[4]/div[2]/div[3]/div/div[2]/table/tbody/tr[1]/td[2]/span";
     String basketButtonXpath="/html/body/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div[3]/a/span[2]";
-    public Products() {
+    public ProductsPageStep() {
         driver = Utils.getDriver();
         actions = new Actions(driver);
     }
