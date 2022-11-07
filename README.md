@@ -20,7 +20,7 @@
 - Arama sonucu çıkan ürünlerden birine tıklandığında yeni sekmede açılacağı için WindowHandle ile yeni sekmeye odaklanılır.
 - Ürün sepete eklenir ve GetText ile ürünün adı alınır.
 - Ürün sayfasında farklı bir satıcıdan bulunan ürüne tıklanır ve bu da sepete eklenir.
-- Son olarak Sepetime gidilir ve ürün sayfasında ürünlerin kaydedilen metinleri ile sepetteki ürün metinleri assertions ile karşılaştırılarak başarılı veya başarısız sonucu alını.
+- Son olarak Sepetime gidilir ve ürün sayfasında ürünlerin kaydedilen metinleri ile sepetteki ürün metinleri assertions ile karşılaştırılarak başarılı veya başarısız sonucu alınır.
 - Tüm bu işlemler Log4J ile loglanır.
 
 :leftwards_arrow_with_hook:<b> Akış: 2. Senaryo: Login Yapılmadan</b>
@@ -30,7 +30,7 @@
 - Arama sonucu çıkan ürünlerden birine tıklandığında yeni sekmede açılacağı için WindowHandle ile yeni sekmeye odaklanılır.
 - Ürün sepete eklenir ve GetText ile ürünün adı alınır.
 - Ürün sayfasında farklı bir satıcıdan bulunan ürüne tıklanır ve bu da sepete eklenir.
-- Son olarak Sepetime gidilir ve ürün sayfasında ürünlerin kaydedilen metinleri ile sepetteki ürün metinleri assertions ile karşılaştırılarak başarılı veya başarısız sonucu alını.
+- Son olarak Sepetime gidilir ve ürün sayfasında ürünlerin kaydedilen metinleri ile sepetteki ürün metinleri assertions ile karşılaştırılarak başarılı veya başarısız sonucu alınır.
 - Tüm bu işlemler Log4J ile loglanır.
 
 :arrow_forward:<b> Sunum Videosu</b>
